@@ -47,7 +47,7 @@ def alarm_on(time_diff_seconds):
 def main():
     alarm_time=input_time()
     seconds_hms = [3600, 60, 1]
-    remaining_time=current_time(seconds_hms)-time_claculator(seconds_hms,alarm_time)
+    remaining_time=time_claculator(seconds_hms,alarm_time)-current_time(seconds_hms)
     if remaining_time < 0:
         remaining_time += 86400
     alarm_on(remaining_time)
